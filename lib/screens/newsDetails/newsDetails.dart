@@ -57,7 +57,7 @@ class _NewsDetailsState extends State<NewsDetails> with NewsDetailsData{
                       Container(
                         width: MediaQuery.of(context).size.width,
                         child: InkWell(
-                          child: Text('${state.data.articles[widget.index].url}',textDirection: TextDirection.rtl,style: TextStyle(color: Colors.blue),),
+                          child: Text('${state.data.articles[widget.index].url}',textDirection: TextDirection.rtl,style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 16),),
                           onTap: (){
                             Navigator.of(context).push(MaterialPageRoute(builder: (context)=>WebViewScreen(state.data.articles[widget.index].url,state.data.articles[widget.index].source.name)));
                           },
